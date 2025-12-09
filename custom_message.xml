@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mavlink_messages>
+  <message id="50000" name="SENSOR_DATA">
+    <field name="timestamp" type="uint64_t"/>
+    <field name="temperature" type="float"/>
+    <field name="pressure" type="float"/>
+    <field name="humidity" type="float"/>
+    <field name="sensor_id" type="uint8_t"/>
+    <field name="battery_voltage" type="float"/>
+  </message>
+  
+  <message id="50001" name="GPS_DATA">
+    <field name="time" type="uint64_t"/>
+    <field name="latitude" type="int32_t"/>
+    <field name="longitude" type="int32_t"/>
+    <field name="altitude" type="int32_t"/>
+    <field name="satellites" type="uint8_t"/>
+    <field name="fix_type" type="uint8_t"/>
+  </message>
+</mavlink_messages>
