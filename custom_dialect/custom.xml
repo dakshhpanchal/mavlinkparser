@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mavlink>
-    <version>2</version>
-    <dialect>0</dialect>
-    
-    <include>common.xml</include>
-
     <messages>
         <message id="50000" name="SENSOR_DATA">
-            <description>Custom sensor data</description>
+            <description>Custom sensor message</description>
             <field type="uint64_t" name="timestamp">Timestamp (us)</field>
             <field type="float" name="temperature">Temperature (C)</field>
             <field type="float" name="pressure">Pressure (hPa)</field>
@@ -17,11 +12,11 @@
         </message>
 
         <message id="50001" name="GPS_DATA">
-            <description>Custom gps data</description>
+            <description>Custom GPS message</description>
             <field type="uint64_t" name="time">Timestamp (us)</field>
-            <field type="int32_t" name="latitude">Lat * 1e7</field>
-            <field type="int32_t" name="longitude">Lon * 1e7</field>
-            <field type="int32_t" name="altitude">Alt (mm)</field>
+            <field type="int32_t" name="latitude">Latitude * 1e7</field>
+            <field type="int32_t" name="longitude">Longitude * 1e7</field>
+            <field type="int32_t" name="altitude">Altitude (mm)</field>
             <field type="uint8_t" name="satellites">Satellite count</field>
             <field type="uint8_t" name="fix_type">Fix type</field>
         </message>
